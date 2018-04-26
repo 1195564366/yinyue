@@ -1,0 +1,48 @@
+.carouselImg{
+  width: 100%;
+}
+.title{
+  margin: 40rpx 6%;
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+ .radioStationWrapper{
+  display: flex;
+  flex-direction: row;
+} 
+.radioStationItem{
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  height: 400rpx;
+  position: relative;
+}
+.radioStationItem:nth-child(1n){
+  margin: 0 3% 0 6%;
+}
+.radioStationItem:nth-child(2n){
+  margin: 0 6% 0 3%;
+}
+.radioStationCover{
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+.play{
+  position: absolute;
+  width: 70rpx;
+  right: 10rpx;
+  bottom: 100rpx;
+}
+.radioStationTitle{
+  padding-left: 10rpx;
+  font-size: 30rpx;
+}
+.foot{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 50rpx;
+  text-align: center;
+  color: #9B9B9B;
+}

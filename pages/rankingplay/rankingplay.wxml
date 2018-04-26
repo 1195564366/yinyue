@@ -1,0 +1,67 @@
+
+<view class='header-wrapper' id="the-id">
+    <view class='rankingplay-header-mask' style="background-image:url( http://imgcache.qq.com/music/photo_new/T002R300x300M000{{songList[playIndex].data.albummid}}.jpg)">
+    </view>
+    <view class="rankingplay-header">
+        <view class="song-sheet-header">
+            <image class="song-sheet-cover" src="http://imgcache.qq.com/music/photo_new/T002R300x300M000{{songList[playIndex].data.albummid}}.jpg" mode='widthFix'></image>
+            <view class="song-sheet-introduce">
+                <text class="song-sheet-title">{{topinfo.ListName}}</text>
+                <text class="song-sheet-week {{ ( week != '') ? '' : 'hide' }}">第{{week}}周</text>
+                <text class="song-sheet-dayofyear {{ ( dayOfYear != '') ? '' : 'hide' }}">第{{dayOfYear}}天</text>
+                <text class="song-sheet-update-time">{{updateTime}}更新</text>
+            </view>
+        </view>
+        <view class="fixed-wrapper">
+            <view class="song-sheet-play-wrapper">
+                <image src="/images/last.png" mode="widthFix" class="play-btn" bindtap='lastSong'></image>
+                <image src="/images/{{ playState ? 'songpause' : 'songplay' }}.png" mode="widthFix" class="play-btn" bindtap='sitchpPlaybackState'></image>
+                <image src="/images/next.png" mode="widthFix" class="play-btn" bindtap='nextSong'></image>
+                <view class="play-song-introduce">
+                    <text class="play-song-title">{{songList[playIndex].data.songname}}</text>
+                    <view class="play-singer-name">
+                        <block wx:for="{{songList[playIndex].data.singer}}" wx:key="index">
+                            <text>{{ index >= 1 ? ' / ' : ''}}{{item.name}}</text>
+                        </block>
+                    </view>
+                </view>
+            </view>
+            <!-- 进度条 -->
+            <view class='playback-progress'>
+                <progress percent="{{playbackProgress}}" stroke-width="2" activeColor="#31C27C" backgroundColor="rgba(255,255,255,.2)"/>
+            </view>
+            <!-- 播放进度条 -->
+            <view class='minute'>
+                <view class='play-time'>{{intervalPlyaMinute}}</view>
+                <view class='intotal-time'>{{intervalMinute}}</view>
+            </view>
+        </view>
+        
+    </view>
+</view>
+
+<view class="ranking-content">
+     <view class="ranking-list">排行榜  共{{songList.length}}首</view>
+    <scroll-view scroll-y="true" style="height:{{scrollHeight}}px" scroll-top="{{songAllHeight}}" scroll-with-animation="true">
+        <block wx:for="{{songList}}" wx:key="index">
+            <view class='song-item' data-songid="{{index}}" bindtap='doubleClickSwitchSong'>
+                <view class="ranking-num {{ (index === 0 || index === 1 || index === 2) ? 'red' : ''}}">
+                    {{index+1}}
+                </view>
+                <view class="song-conent {{ index === playIndex ? 'active' : ''  }}">
+                    <text class='song-name'>{{item.data.songname}}</text>
+                    <view class='singer-name'>
+                        <block wx:for="{{item.data.singer}}" wx:key="index">
+                            <text>{{ ( index >= 1) ? ' / ' : ''}}{{item.name}}</text>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+        <view class='intro-unfold'>
+            <text class='intro-unfold-title'>简介</text>
+            <rich-text nodes="{{topinfo.info}}" class='intro-unfold-info'></rich-text>
+        </view>
+    </scroll-view> 
+</view>

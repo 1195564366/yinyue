@@ -1,0 +1,32 @@
+<image src="{{songCover}}" style="width:{{backgroundWidth}}px;height:{{backgroundHeight}}px" class="background-img"></image>
+<view class="bg_mask" style="width:{{backgroundWidth}}px;height:{{backgroundHeight}}px">
+  <view class="music-play-header">
+    <image class="music-cover" src="{{songCover}}" mode="widthFix"></image>
+    <view class="music-content">
+        <text class="song-name">{{songName}}</text>
+        <text class="singer-name">{{singerName}}</text>
+    </view>
+    <image src="/images/{{ playState ? 'songpause' : 'songplay' }}.png" class="play-btn" mode='widthFix' bindtap="SwitchPlaybackState"></image>
+  </view>
+
+    <!-- 中间旋转封面 -->
+    <view class='revolving-cover-wrapper'>
+        <image src='/images/disc_default.png' mode='widthFix' class='disc-bg' style="transform:rotate({{rotateAngle}}deg);"></image>
+        <!-- <image src='/images/disc_light.png' mode='widthFix' class='disc-bg-2' style="transform:rotate({{rotateAngle}}deg);"></image> -->
+        <image src="{{songCover}}" mode="widthFix" class='rotate-cover' style="transform:rotate({{rotateAngle}}deg);"></image>
+    </view>
+  <!-- 播放进度条 -->
+  <view class='playback-progress'>
+    <progress percent="{{playbackProgress}}" stroke-width="2" activeColor="#31C27C" backgroundColor="rgba(255,255,255,.2)"/>
+  </view>
+  <!-- 当前播放时长和总时长 -->
+  <view class='minute' style="width:{{backgroundWidth}}px">
+    <view class='play-time'>{{intervalPlyaMinute}}</view>
+    <view class='intotal-time'>{{intervalMinute}}</view>
+  </view>
+  <!-- 下载歌曲按钮 -->
+  <view class='download-song-btn' bindtap='downLoadSong'>
+    <image src='/images/music.png' mode='widthFix' class='download-song-btn-img'></image>
+    <text class="download-song-btn-text">免费下载这首歌</text>
+  </view>
+</view>

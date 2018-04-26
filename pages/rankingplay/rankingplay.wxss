@@ -1,0 +1,179 @@
+.hide{
+    display: none;
+}
+.header-wrapper{
+    position: relative;
+}
+.rankingplay-header-mask{
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);    
+            filter: blur(10px);
+    
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+}
+.rankingplay-header{
+    /* position: absolute;  */
+    padding: 34rpx 32rpx 40rpx 32rpx;
+    z-index: 100; 
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    box-sizing: border-box; 
+}
+.song-sheet-header{
+    display: flex;
+    flex-direction: row;
+}
+.song-sheet-cover{
+    width: 250rpx;
+}
+.song-sheet-introduce{
+    margin-left: 20rpx;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+.song-sheet-title{
+    font-size: 35rpx;
+    margin-top: 50rpx;
+}
+.song-sheet-week,
+.song-sheet-dayofyear,
+.song-sheet-update-time{
+    margin-top: 16rpx;
+    font: 300 24rpx/1.5 sans-serif;
+}
+.fixed-wrapper{
+    padding-top: 30rpx;
+}
+.song-sheet-play-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.play-btn{
+    width: 90rpx;
+    margin-right: 20rpx;
+}
+.play-song-introduce{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.play-song-title{
+    font-size: 30rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.play-singer-name{
+    font-size: 25rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+#audio-play{
+    position: fixed;
+    bottom: 0;
+}
+.playback-progress{
+    width: 80%;
+    /* bottom: 40rpx; */
+    margin: 50rpx auto 0 auto;
+}
+
+.minute{
+    /* position: fixed;
+    bottom: 14.2%; */
+    position: absolute;
+    bottom: 30rpx;
+    width: 90%; 
+    color: rgba(255,255,255,.5);
+    font-size: 20rpx;
+}
+.play-time{
+    float: left;
+}
+.intotal-time{
+    float: right;
+}
+
+
+.ranking-list{
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-left: 40rpx;
+    font-size: 28rpx;
+    color: #777;
+}
+.song-item{
+    display: flex;
+    flex-direction: row;
+}
+.ranking-num{
+    width: 90rpx;
+    text-align: center;
+    line-height: 110rpx; 
+    color: #777;
+    font-size: 32rpx;
+}
+.ranking-num.red{
+    color: #FF400B;
+}
+.song-conent{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    padding: 20rpx 32rpx;
+}
+.song-name{
+    flex-direction: column;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size: 32rpx;
+}
+.singer-name{
+    color: #777777;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font: 300 24rpx/1.5 sans-serif;
+}
+
+.song-conent.active .song-name,.song-conent.active .singer-name{
+    color: #31c27c;
+}
+
+.intro-unfold{
+    padding: 32rpx;
+    color: #777777;
+}
+.intro-unfold-title{
+    display: block;
+    margin: 0 auto;
+    font-size: 36rpx;
+    text-align: center;
+    margin-bottom: 20rpx;
+}
+.intro-unfold-info{
+    text-align: justify;
+    word-wrap: break-word;
+    font-size: 28rpx;
+}

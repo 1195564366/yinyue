@@ -1,0 +1,142 @@
+page{
+  background: #ffffff;
+}
+.hide{
+  display: none;
+}
+.borderRadius{
+  border-radius: 50%;
+}
+.search-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.header{
+    background: #f4f4f4;
+    padding: 20rpx;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+}
+.search-box{
+    position: relative;
+    border-radius: 3rpx;
+    background: #fff;
+    padding: 16rpx 24rpx 16rpx 70rpx;
+    -webkit-box-flex: 1;
+}
+.search{
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #B2B2B2;
+}
+.search-img{
+  position: absolute;
+  top:20rpx;
+  left: 20rpx;
+  width: 40rpx;
+}
+.delete{
+  position: absolute;
+  top:0;
+  right: 100rpx;
+  width: 40rpx;
+  padding: 20rpx;
+  z-index: 2;
+}
+.cancel{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60rpx;
+  height: 90rpx;
+  line-height: 82rpx;
+  font-size: 28rpx;
+  /* color: #B2B2B2; */
+  padding: 0 20rpx;
+  background-color: #F4F4F4;
+  z-index: 2;
+}
+.hot{
+  padding: 20rpx;
+}
+.hot-title{
+  display: block;
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+.hot-item{
+    display: inline-block;
+    font-size: 30rpx;
+    padding: 0 20rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    color: #000;
+    border: 1px solid rgba(0,0,0,.6);
+    border-radius: 198rpx;
+    word-break: keep-all;
+    margin-bottom: 20rpx;
+    margin-right: 28rpx;
+}
+.search-result-item{
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  border-top: 2rpx solid #e5e5e5;
+}
+.search-result-item.hide{
+  display: none;
+}
+.search-result-cover{
+  width: 100rpx;
+}
+.search-result-content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  overflow: hidden;
+}
+.song-title{
+  font-size: 30rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.singer-name{
+  font-size: 25rpx;
+}
+
+.search-history-item{
+  height: 88rpx;
+  line-height: 88rpx;
+  border-top: 2rpx solid #ededed;
+  display: flex;
+  flex-direction: row;
+}
+.search-history-icon{
+  width: 40rpx;
+  margin-left: 30rpx;
+  /* vertical-align: middle; */
+  margin-top: 25rpx;
+}
+.search-history-text{
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  flex: 1;
+}
+.search-history-delete{
+  float: right;
+  margin-right: 30rpx;
+  font-size: 40rpx;
+  color: rgba(0,0,0,0.6);
+}
+.clear-search-history{
+    text-align: center;
+    height: 44rpx;
+    line-height: 44rpx;
+    color: #47c88a;
+    font-size: 28rpx;
+}

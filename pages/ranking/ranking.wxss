@@ -1,0 +1,61 @@
+.rankingItem{
+  background: #fff;
+  margin-bottom: 20rpx;
+  width: 90%;
+  margin: 0 auto 20rpx auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.rankingItem:first-child{
+  margin-top: 20rpx;
+}
+.rankingCover{
+  width: 30%;
+  vertical-align: middle;
+}
+.audience{
+  position: absolute;
+  bottom: 10rpx;
+  left: 10rpx;
+  line-height: 24rpx;
+}
+.audience-img{
+  width: 30rpx;
+  vertical-align: middle;
+}
+.audience-count{
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  color: #ffffff;
+  opacity: 0.6;
+}
+.content{
+  flex: 1;
+  margin: 10rpx 40rpx 0 30rpx;
+  font-size: 30rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.sing{
+  margin-top: 10rpx;
+}
+.song-sort,.singer-name{
+  font-size: 25rpx;
+  color: rgba(0,0,0,0.5);
+}
+.song-name{
+  margin-left: 5rpx;
+  font-size: 25rpx;
+}
+.right-arrow{
+    position: absolute;
+    right: 20rpx;
+    top: 45%;
+    width: 20rpx;
+    height: 20rpx;
+    border-right: 2rpx solid #b2b2b2;
+    border-bottom: 2rpx solid #b2b2b2;
+    transform: rotate(315deg);
+}

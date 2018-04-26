@@ -1,0 +1,118 @@
+.background-img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-size: cover;
+    background-position: bottom center;
+    filter: blur(10px);  
+}
+.bg_mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+.music-play-header{
+    display: flex;
+    flex-direction: row;
+    padding: 30rpx 160rpx 30rpx 30rpx;
+    background: rgba(0,0,0,0.1);
+    position: relative;
+}
+.music-cover{
+    width: 160rpx;
+}
+.music-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30rpx;
+}
+.song-name{
+    margin-top: 20rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    overflow: hidden;
+    font-size: 36rpx;
+    font-weight: normal;
+    color: #ffffff;
+}
+.singer-name{
+    height: 60rpx;
+    line-height: 60rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 28rpx;
+    color: #fff;
+}
+.play-btn{
+    width: 90rpx;
+    position: absolute;
+    top: 60rpx;
+    right: 50rpx;
+}
+.playback-progress{
+    position: fixed;
+    bottom: 15%;
+    left: 12.5%;
+    width: 75%;
+    margin: 0 auto;
+}
+.minute{
+    position: fixed;
+    bottom: 14.2%;
+    color: rgba(255,255,255,.5);
+    font-size: 20rpx;
+}
+.play-time{
+    float: left;
+    margin-left: 3%;
+}
+.intotal-time{
+    float: right;
+    margin-right: 3%;
+}
+.revolving-cover-wrapper{
+    text-align: center;
+    position: relative;
+}
+.disc-bg{
+    position: absolute;
+    top: 100rpx;
+    left: 15%;
+    width: 70%;
+    border-radius: 50%;
+}
+.rotate-cover{
+    position: absolute;
+    top: 175rpx;
+    left: 25%;
+    width: 50%;
+    border-radius: 50%;
+}
+.download-song-btn{
+    position:fixed;
+    bottom: 5%;
+    left: 25%;
+    width: 50%; 
+    height: 80rpx;
+    line-height: 70rpx; 
+    background-color: #31C27C;
+    text-align: center;
+    border-radius: 40rpx;
+}
+.download-song-btn-img{
+    width: 40rpx;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}
+.download-song-btn-text{
+    font-size: 30rpx;
+    color: #ffffff;
+}

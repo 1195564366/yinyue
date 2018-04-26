@@ -1,0 +1,18 @@
+<swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="#31C27C" autoplay="true" interval="5000" circular="false">
+  <block wx:for="{{slider}}" wx:key="index">
+    <swiper-item id="{{item.id}}">
+      <image class='carouselImg' src="{{item.picUrl}}" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='title'>电台</view>
+<view class='radioStationWrapper'>
+  <block wx:for="{{radioList}}" wx:key="index">
+    <view class='radioStationItem' id="{{item.radioid}}">
+      <image class='radioStationCover' src="{{item.picUrl}}" mode="widthFix"></image>
+      <image src="/images/play.png" class='play' mode="widthFix"></image>
+      <text class='radioStationTitle'>{{item.Ftitle}}</text>
+    </view>
+  </block>
+</view>
+<view class='foot'>Welcome to Happy music</view>

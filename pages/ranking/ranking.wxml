@@ -1,0 +1,22 @@
+<block wx:for="{{topList}}" wx:key="index">
+  <navigator url="../rankingplay/rankingplay?id={{item.id}}">
+    <view class='rankingItem'>
+        <image src="{{item.picUrl}}" class='rankingCover' mode='widthFix'></image>
+        <view class='audience'>
+        <image class='audience-img' src="/images/audience.png" mode='widthFix'></image> 
+        <text class='audience-count'>{{item.listenCount}}</text>
+        </view>
+        <view class='content'>
+        <text class='title'>{{item.topTitle}}</text>
+        <block wx:for="{{item.songList}}" wx:key="index">
+            <view class='sing'>
+            <text class='song-sort'>{{index+1}}</text>
+            <text class='song-name'>{{item.songname}}</text>
+            <text class='singer-name'> - {{item.singername}}</text>
+            </view>
+        </block>
+        </view>
+        <view class='right-arrow'></view>
+    </view>
+  </navigator>
+</block>
